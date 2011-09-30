@@ -2,6 +2,8 @@
 
 This is a simple [node.js](http://nodejs.org/) server (node.js ver > 0.4.7) powered by [express.js 2.4.6](http://expressjs.com/guide.html), included all the file Heroku needed ([heroku guide Sep 2011](http://devcenter.heroku.com/articles/node-js))
 
+You can use it on your own server with  [foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) 
+
 ## Edit
 You can modify this server by editing `app.js`
 
@@ -10,8 +12,11 @@ Using [foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)
 
   $ foreman start
 
+If you want to change the server file name ( `app.js` ), or start more service on the server start, please edit `Procfile` 
+
 ## Static File
-You can put the static file under `/public` by default and using `public/index.html` as index page
+You can put the static file under `/public` by default and using `public/index.html` as index page (Sorry that I am too lazy to allow you change the index file name and web directory from variable)
+
 You may render the index from view by uncomment `rss.render(...)` and related view setting in `app.configure`
 
 ## More package and dependency
@@ -19,6 +24,7 @@ Heroku using `npm` to manage the dependency, and they need to managed in `packag
 
 ## More Worker
 You need to change the `Procfile` according [heroku guide Sep 2011](http://devcenter.heroku.com/articles/node-js)
+
 Also you need to scale the worker process.
 
 ## More Scale
